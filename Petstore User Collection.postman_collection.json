@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "9b8de389-575b-49fd-996e-7952f52a01a5",
+		"name": "Petstore User Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10243546"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1000,\r\n  \"username\": \"petstore123\",\r\n  \"firstName\": \"Shivangi\",\r\n  \"lastName\": \"Gupta\",\r\n  \"email\": \"shivangi.gupta.hcst@gmail.com\",\r\n  \"password\": \"Sh!v@ng!2107\",\r\n  \"phone\": \"1234567890\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates  list of users with given input array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 1001,\r\n    \"username\": \"Shivya\",\r\n    \"firstName\": \"Shivya\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"shivya@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"phone\": \"1234567890\",\r\n    \"userStatus\": 1\r\n  },\r\n  {\r\n    \"id\": 1002,\r\n    \"username\": \"NishantGupta\",\r\n    \"firstName\": \"Nishant\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"nishantgupta@gmail.com\",\r\n    \"password\": \"0987654323\",\r\n    \"phone\": \"123445878\",\r\n    \"userStatus\": 1\r\n   }\r\n]\r\n   \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithArray",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creates list of users with given input array",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": 1003,\r\n    \"username\": \"Sarlagupta\",\r\n    \"firstName\": \"Sarla\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"sarlagupta@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"1234567890\",\r\n    \"userStatus\": 0\r\n  },\r\n  {\r\n    \"id\": 1004,\r\n    \"username\": \"pragupta\",\r\n    \"firstName\": \"prashant\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"prashantgupta@gmail.com\",\r\n    \"password\": \"03333\",\r\n    \"phone\": \"7846234567\",\r\n    \"userStatus\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1001,\r\n    \"username\": \"Shivi\",\r\n    \"firstName\": \"Shivya\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"shivya@gmail.com\",\r\n    \"password\": \"1234578\",\r\n    \"phone\": \"1234567890\",\r\n    \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Shivya%20",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Shivya%20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Updated by User Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Shivi",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Shivi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/Shivya",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"Shivya"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user into the system",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/login?username=pragupta&password=03333",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "pragupta"
+						},
+						{
+							"key": "password",
+							"value": "03333"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logs out current logged in user session",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Creates list of users using random value",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"let USER1_ID = Math.floor(Math.random() * 100000) ; //58647\r",
+							"\r",
+							"pm.collectionVariables.set(\"user1_id\", USER1_ID);\r",
+							"\r",
+							"//console.log(\"For user1,ID: \", USER1_ID)\r",
+							"\r",
+							"/////////////////////////////////////////////////\r",
+							"\r",
+							"let USER2_ID = Math.floor(Math.random() * 100000) ; //58647\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2_id\", USER2_ID);\r",
+							"\r",
+							"//console.log(\"For user2,ID: \", USER2_ID);\r",
+							"\r",
+							"///////////////////////////////////////////////\r",
+							"\r",
+							"// Company name: stripecloud (Username will start with \"Str-\") and format : \"Str-*****\"\r",
+							"\r",
+							"let USER1_NAME =\"Str-\" + Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user1_name\", USER1_NAME);\r",
+							"\r",
+							"//console.log(\"For user1, USER NAME : \",USER1_NAME);\r",
+							"\r",
+							"/////////////////////////////////////////////////\r",
+							"\r",
+							"let USER2_NAME =\"Str-\" + Math.floor(Math.random() * 100000);\r",
+							"\r",
+							"pm.collectionVariables.set(\"user2_name\", USER2_NAME);\r",
+							"\r",
+							"//console.log(\"For user2, USER NAME : \",USER2_NAME);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//let jsonRequest = pm.request.json();\r",
+							"\r",
+							"let jsonResponse = pm.response.json();\r",
+							"\r",
+							"pm.test(\"verify response status is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Response Body Validation\r",
+							"\r",
+							"pm.test(\"verify response body code value is 200\", function(){\r",
+							"    pm.expect(200).to.eql(jsonResponse.code);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify response body message value is ok\", function(){\r",
+							"    pm.expect(\"ok\").to.eql(jsonResponse.message);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify response body type value is unknown\", function(){\r",
+							"    pm.expect(\"unknown\").to.eql(jsonResponse.type);\r",
+							"});\r",
+							"\r",
+							"// Respose header Validation\r",
+							"\r",
+							"pm.test(\"verify response header key 'Content-Type'\" , function(){\r",
+							"    pm.expect(\"application/json\").to.eql(pm.response.headers.get(\"Content-Type\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"id\": \"{{user1_id}}\",\r\n    \"username\": \"{{user1_name}}\",\r\n    \"firstName\": \"Sarla\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"sarlagupta@gmail.com\",\r\n    \"password\": \"1234\",\r\n    \"phone\": \"1234567890\",\r\n    \"userStatus\": 1\r\n  },\r\n  {\r\n    \"id\": \"{{user2_id}}\",\r\n    \"username\": \"{{user2_name}}\",\r\n    \"firstName\": \"prashant\",\r\n    \"lastName\": \"Gupta\",\r\n    \"email\": \"prashantgupta@gmail.com\",\r\n    \"password\": \"03333\",\r\n    \"phone\": \"7846234567\",\r\n    \"userStatus\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/createWithList",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "user1_id",
+			"value": ""
+		},
+		{
+			"key": "user1_name",
+			"value": ""
+		},
+		{
+			"key": "user2_name",
+			"value": ""
+		},
+		{
+			"key": "user2_id",
+			"value": ""
+		}
+	]
+}

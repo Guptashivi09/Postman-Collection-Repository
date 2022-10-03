@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "46f60ff9-a734-4c5c-8236-3c6c7b4226ae",
+		"name": "Petstore Store Collection Acccess to petstore order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10243546"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 23,\r\n  \"petId\": 200,\r\n  \"quantity\": 12,\r\n  \"shipDate\": \"2022-10-12T22:11:38.432Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find purchase order by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/23",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Returns pet inventories by Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/inventory",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete purchasde order by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/23",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"23"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

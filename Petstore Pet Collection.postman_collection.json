@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "c5410022-f7e1-486b-8d2f-fa2652bad3ca",
+		"name": "Petstore Pet Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10243546"
+	},
+	"item": [
+		{
+			"name": "Add a new pet to the store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 200,\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"Dog\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"C:\\\\Users\\\\Shivangi Gupta\\\\OneDrive\\\\Pictures\\\\Camera Roll\\\\doggie.jpg\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 21,\r\n      \"name\": \"Tall\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uploads an image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "additionalMetadata",
+							"value": "Doggie is so smart",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Shivangi Gupta/OneDrive/Pictures/Camera Roll/doggie.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/200/uploadImage",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"200",
+						"uploadImage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finds pets by status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "available"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find pet by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/200",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update an existing pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 200,\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"Black Papillon\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"C:\\\\Users\\\\Shivangi Gupta\\\\OneDrive\\\\Pictures\\\\Camera Roll\\\\doggie.jpg\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 21,\r\n      \"name\": \"small\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updates a pet in the store with form data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Hennessy",
+							"type": "text"
+						},
+						{
+							"key": "status\n",
+							"value": "pending",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/200",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a pet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
